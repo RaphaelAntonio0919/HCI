@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Transportation App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="profile">
+                <h1>Hello</h1>
+                <h2>Raphael Antonio</h2>
+                <img src="/Users/raphaelhimself/Downloads/ProgrammingAssignment2-2/ProgrammingAssignment2/Antonio_HCI_PWD_focused_transport_app_UIs/favicon.png" alt="Profile Picture" class="profile-img">
+            </div>
+            <div class="search-bar">
+                <label for="search-input" class="search-label">Where will you go?</label>
+                <div class="search-bar-container">
+                    <input type="text" id="search-input" placeholder=" ">
+                    <span class="search-text">Search:</span>
+                </div>
+            </div>
+            <div class="balance-info">
+                <div class="info-box">
+                    <div class="info-label">Balance</div>
+                    <div class="info-value">$18</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">Rewards</div>
+                    <div class="info-value">$10.25</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">Total Trips</div>
+                    <div class="info-value">189</div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="transport-options">
+                <h2>Choose your Transport</h2>
+                <button class="transport-button" aria-label="Bus" onclick="selectTransport('Bus')">
+                    <img src="bus-icon.jpeg" alt="Bus Icon"> Bus
+                </button>
+                <button class="transport-button" aria-label="MRT" onclick="selectTransport('MRT')">
+                    <img src="mrt-icon.webp" alt="MRT Icon"> MRT
+                </button>
+            </section>
+
+            <section class="schedule">
+                <h2>MRT Schedule</h2>
+                <div class="schedule-option">
+                    <div>From: Lorem MRT Station</div>
+                    <div>To: Dolor MRT Station</div>
+                    <div>Time: 10:00 - 10:30</div>
+                    <div>Fare: $5.0</div>
+                    <button class="select-schedule" aria-label="Select Schedule 10:00 - 10:30" onclick="selectSchedule('10:00 - 10:30')">Select</button>
+                </div>
+                <div class="schedule-option">
+                    <div>From: Lorem MRT Station</div>
+                    <div>To: Dolor MRT Station</div>
+                    <div>Time: 10:30 - 11:00</div>
+                    <div>Fare: $5.0</div>
+                    <button class="select-schedule" aria-label="Select Schedule 10:30 - 11:00" onclick="selectSchedule('10:30 - 11:00')">Select</button>
+                </div>
+            </section>
+
+            <section class="ticket">
+                <h2>Ticket</h2>
+                <div>From: Lorem MRT Station</div>
+                <div>To: Dolor MRT Station</div>
+                <div>Time: 10:00 - 10:30</div>
+                <div>Fare: $5.0</div>
+                <div>Balance: $13.0</div>
+                <button class="buy-ticket" aria-label="Buy Ticket" onclick="buyTicket()">Buy Ticket</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
